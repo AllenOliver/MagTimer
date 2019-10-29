@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-image: url(/background.jpg);
+  
+}
+.App {
+  margin-top: 50px;
+  text-shadow: 5px 3px 0px rgba(0,0,0,0.30);
+}
+
+
+.App-logo {
+  height: 40vmin;
+}
+.darken{
+  background: #233233;
+  font-family: 'Press Start 2P', cursive;
+  border: 4px solid black;
+}
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+}
+
+.App-link {
+  color: #09d3ac;
+}
