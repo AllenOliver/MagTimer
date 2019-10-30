@@ -4,7 +4,7 @@ class Timer extends React.Component {
 
     constructor() {
         super();
-        this.state = { time: {}, seconds: 210 };
+        this.state = { time: {}, seconds: 210, buttonText: "Start Timer", enabled: true };
         this.timer = 0;
         this.startTimer = this.startTimer.bind(this);
         this.countDown = this.countDown.bind(this);
@@ -29,16 +29,19 @@ class Timer extends React.Component {
 
     componentDidMount() {
         let timeLeftVar = this.secondsToTime(this.state.seconds);
-        this.setState({ time: timeLeftVar });
+        this.setState({ time: timeLeftVar, buttonText: "Start Timer", enabled: true });
     }
 
     startTimer() {
-        if (this.timer == 0 && this.state.seconds > 0) {
+        if (this.timer === 0 && this.state.seconds > 0) {
             this.timer = setInterval(this.countDown, 1000);
+            this.setState({buttonText: "Timer Started", enabled: false});
         }
         else {
             this.setState({
                 time: this.secondsToTime(210),
+                buttonText: "Start Timer",
+                enabled: false
                 //seconds: 5,
             });
             this.timer = setInterval(this.countDown, 1000);
@@ -55,13 +58,15 @@ class Timer extends React.Component {
         });
 
         // Check if we're at zero.
-        if (seconds == 0) {
+        if (seconds === 0) {
 
             audio.play();
             clearInterval(this.timer);
             this.setState({
                 time: this.secondsToTime(seconds),
-                seconds: 5,
+                seconds: 210,
+                buttonText: "Restart Timer",
+                enabled: true
             });
         }
     }
@@ -72,7 +77,7 @@ class Timer extends React.Component {
                 <h5>Minutes: {this.state.time.m} Seconds: {this.state.time.s}</h5>
             </div>
             <div className="row">
-                <button className="btn btn-block btn-primary startButton" onClick={this.startTimer}>Start</button>
+                <button className="btn btn-block btn-primary startButton"  disabled={!this.state.enabled} onClick={this.startTimer}>{this.state.buttonText}</button>
             </div>
         </div>
 
