@@ -43,11 +43,11 @@ function selectImage() {
   const rand = Math.floor(Math.random() * max) + min;
   switch(rand){
     case(1):
-      return './HeaderImages/sato.gif';
+      return '/HeaderImages/sato.gif';
     case(2):
-      return './HeaderImages/mag.jpg';
+      return './mag.jpg';
     default:
-        return './HeaderImages/sato.gif';
+        return './sato.gif';
   }
   
 }
