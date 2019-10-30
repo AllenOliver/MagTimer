@@ -48,7 +48,7 @@ class Timer extends React.Component {
     countDown() {
         // Remove one second, set state so a re-render happens.
         let seconds = this.state.seconds - 1;
-        let audio = new Audio('/MagTime.wav')
+        let audio = new Audio('Sounds/MagTime.wav')
         this.setState({
             time: this.secondsToTime(seconds),
             seconds: seconds,
