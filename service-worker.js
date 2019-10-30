@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MagTimer/precache-manifest.ea9cced1f08d67269ec706e2ca426a82.js"
+  "/MagTimer/precache-manifest.f7ec28feb47517d7a4dce43227f28dd0.js"
 );
 
 workbox.clientsClaim();
