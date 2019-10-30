@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bb825751f13f40772c2c",
+    "revision": "4e4fa5f33246c0ad8933",
     "url": "/MagTimer/static/css/main.33e1d78f.chunk.css"
   },
   {
-    "revision": "bb825751f13f40772c2c",
-    "url": "/MagTimer/static/js/main.9557f77f.chunk.js"
+    "revision": "4e4fa5f33246c0ad8933",
+    "url": "/MagTimer/static/js/main.08057cdf.chunk.js"
   },
   {
     "revision": "ab2a338e83fb0d39ab6d",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/MagTimer/static/media/background.32b6711f.jpg"
   },
   {
-    "revision": "c6cf065bc01d696c1e86fd211ecb232a",
+    "revision": "bb0aa8e986af227e6c351de82d69547e",
     "url": "/MagTimer/index.html"
   }
 ];
